@@ -1,0 +1,1258 @@
+{
+	"info": {
+		"_postman_id": "4f8ad78d-9205-4fc9-9dc1-1ffac5de0489",
+		"name": "TGI - CEUNSP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9569998"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "guilherme",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Senha",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "guilherme",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/reset",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Listar Usuário",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiZ3VpbGhlcm1lIiwiaWQiOjEsIm5pdmVsX2FjZXNzbyI6MSwidW5pZGFkZV9uZWdvY2lvIjoxLCJleHBpcmFjYW9fdG9rZW4iOiIyMDIyLTA2LTI4IDE1OjM0OjM1In0.ZO3QXGFoSq84axYGrdds9THNzpUBdMzUfx9mJQgY2Qs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuários",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiVGVzdGUiLCJpZCI6NCwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMTIgMDE6NDQ6MzYifQ.0fw6nQlk-rCRPRR-Mxhd8Wu7RrLR0LOfQ2Oh8kB6g0A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDctMjkgMjE6MjI6NTEifQ.UVsOXlHABR96zzdFd1PubzSdvdpv5uuw0eWqW3uF5Io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Teste",
+									"type": "text"
+								},
+								{
+									"key": "login",
+									"value": "teste3",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nivel_acesso",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "usuario_ativo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fk_unidade_negocio",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiVGVzdGUiLCJpZCI6NCwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMTIgMDI6NTg6NDYifQ.yN_SZ-IWTawYN7ec1vliDardTYk6YKmf2BxVosf5Zc8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "pica",
+									"type": "text"
+								},
+								{
+									"key": "login",
+									"value": "roberto",
+									"type": "text"
+								},
+								{
+									"key": "senha",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "nivel_acesso",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "usuario_ativo",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "fk_unidade_negocio",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/usuario/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiZ3VpbGhlcm1lIiwiaWQiOjEsIm5pdmVsX2FjZXNzbyI6MSwidW5pZGFkZV9uZWdvY2lvIjoxLCJleHBpcmFjYW9fdG9rZW4iOiIyMDIyLTA2LTI4IDE0OjUxOjMyIn0.bCcKdz_-leHx_VMcwGczkXn-NyJDa6uqoRuXOt6dlEE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/usuario/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Listar Produto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiZ3VpbGhlcm1lIiwiaWQiOjEsIm5pdmVsX2FjZXNzbyI6MSwidW5pZGFkZV9uZWdvY2lvIjoxLCJleHBpcmFjYW9fdG9rZW4iOiIyMDIyLTA2LTI4IDE1OjM0OjM1In0.ZO3QXGFoSq84axYGrdds9THNzpUBdMzUfx9mJQgY2Qs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Produtos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDkgMjA6Mzc6MjIifQ._i2CnZWswgZy7OzhYszgANtfDUkSGFRitYagjSvgEg0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDkgMjA6Mzc6MjIifQ._i2CnZWswgZy7OzhYszgANtfDUkSGFRitYagjSvgEg0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "detergente",
+									"type": "text"
+								},
+								{
+									"key": "produto_ativo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "produto_deletado",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "fk_unidade_medida",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDkgMjA6Mzc6MjIifQ._i2CnZWswgZy7OzhYszgANtfDUkSGFRitYagjSvgEg0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "sabonete líquido",
+									"type": "text"
+								},
+								{
+									"key": "produto_ativo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "produto_deletado",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "fk_unidade_medida",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Produto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDkgMjA6Mzc6MjIifQ._i2CnZWswgZy7OzhYszgANtfDUkSGFRitYagjSvgEg0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/produto/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"produto",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unidade",
+			"item": [
+				{
+					"name": "Listar Unidade",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDMgMTg6MjM6MzUifQ.jc8czntbGDHi1TM44rxstANnlFei_bQ5Uk5MlmOzd1o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/unidade/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"unidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Unidades",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDMgMTg6MjM6MzUifQ.jc8czntbGDHi1TM44rxstANnlFei_bQ5Uk5MlmOzd1o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/unidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"unidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Unidade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDMgMjI6MzQ6NDkifQ.1LjUtTrJ26NmzAkktevnA4nUT5g-vxGpvo8Ep9uiMCw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "logradouro",
+									"value": "Rua do Centro",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "65416-630",
+									"type": "text"
+								},
+								{
+									"key": "numero",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "complemento",
+									"value": "Casa 1",
+									"type": "text"
+								},
+								{
+									"key": "bairro",
+									"value": "Centro",
+									"type": "text"
+								},
+								{
+									"key": "cidade",
+									"value": "Indaiatuba",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "SP",
+									"type": "default"
+								},
+								{
+									"key": "nome",
+									"value": "Filial 01",
+									"type": "default"
+								},
+								{
+									"key": "telefone",
+									"value": "(11) 9 3016-7236",
+									"type": "default"
+								},
+								{
+									"key": "id_usuario_responsavel",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/unidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"unidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Unidade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDMgMjI6MzQ6NDkifQ.1LjUtTrJ26NmzAkktevnA4nUT5g-vxGpvo8Ep9uiMCw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "logradouro",
+									"value": "Rua do Centro",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "65416-630",
+									"type": "text"
+								},
+								{
+									"key": "numero",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "complemento",
+									"value": "Casa 1",
+									"type": "text"
+								},
+								{
+									"key": "bairro",
+									"value": "Centro",
+									"type": "text"
+								},
+								{
+									"key": "cidade",
+									"value": "Indaiatuba",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "SP",
+									"type": "default"
+								},
+								{
+									"key": "nome",
+									"value": "Filial 01",
+									"type": "default"
+								},
+								{
+									"key": "telefone",
+									"value": "(11) 9 3016-7236",
+									"type": "default"
+								},
+								{
+									"key": "id_usuario_responsavel",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/unidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"unidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Unidade",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiZ3VpbGhlcm1lIiwiaWQiOjEsIm5pdmVsX2FjZXNzbyI6MSwidW5pZGFkZV9uZWdvY2lvIjoxLCJleHBpcmFjYW9fdG9rZW4iOiIyMDIyLTA2LTI4IDE0OjUxOjMyIn0.bCcKdz_-leHx_VMcwGczkXn-NyJDa6uqoRuXOt6dlEE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/usuario/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"usuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unidade Medida",
+			"item": [
+				{
+					"name": "Listar Unidades de Medida",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDgtMDMgMTg6MjM6MzUifQ.jc8czntbGDHi1TM44rxstANnlFei_bQ5Uk5MlmOzd1o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/unidadeMedida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"unidadeMedida"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fornecedor",
+			"item": [
+				{
+					"name": "Listar Fornecedor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/fornecedor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"fornecedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Fornecedores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/fornecedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"fornecedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Fornecedor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "logradouro",
+									"value": "teste logradouro",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "10544-521",
+									"type": "text"
+								},
+								{
+									"key": "numero",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "complemento",
+									"value": "abd",
+									"type": "text"
+								},
+								{
+									"key": "bairro",
+									"value": "sEI LA",
+									"type": "text"
+								},
+								{
+									"key": "cidade",
+									"value": "Salto",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "SP",
+									"type": "text"
+								},
+								{
+									"key": "nome",
+									"value": "fornecedor",
+									"type": "text"
+								},
+								{
+									"key": "telefone",
+									"value": "(17) 9 0000-0000",
+									"type": "text"
+								},
+								{
+									"key": "fk_representante",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/fornecedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"fornecedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Fornecedor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "logradouro",
+									"value": "vsdfyuww",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "134242",
+									"type": "text"
+								},
+								{
+									"key": "numero",
+									"value": "34",
+									"type": "text"
+								},
+								{
+									"key": "complemento",
+									"value": "1 dsfsd",
+									"type": "text"
+								},
+								{
+									"key": "bairro",
+									"value": "fwe",
+									"type": "text"
+								},
+								{
+									"key": "cidade",
+									"value": "fewe",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "SP",
+									"type": "text"
+								},
+								{
+									"key": "fk_endereco",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "nome",
+									"value": "etssda",
+									"type": "text"
+								},
+								{
+									"key": "fornecedor_ativo",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "telefone",
+									"value": "(18) 9 0000-0000",
+									"type": "text"
+								},
+								{
+									"key": "fk_representante",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/fornecedor/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"fornecedor",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Fornecedor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTQgMTc6MDg6MjUifQ.LzwwbHnWruFxEfPT9y8KAMEPamuKgmfv4PdjWioYcyE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/fornecedor/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"fornecedor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Representante",
+			"item": [
+				{
+					"name": "Listar Representante",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/representante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"representante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Representantes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/representante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"representante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Representante",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Representante 002",
+									"type": "text"
+								},
+								{
+									"key": "telefone",
+									"value": "(85) 9 0000-0000",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "teste@teste.com.br",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/representante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"representante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Representante",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "Representante 002",
+									"type": "text"
+								},
+								{
+									"key": "telefone",
+									"value": "(85) 9 0000-0000",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "teste2@teste.com.br",
+									"type": "text"
+								},
+								{
+									"key": "representante_ativo",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/representante/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"representante",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Representante",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJub21lIjoiR3VpbGhlcm1lIEdvZWR0ZWwiLCJpZCI6MSwibml2ZWxfYWNlc3NvIjoxLCJ1bmlkYWRlX25lZ29jaW8iOm51bGwsImV4cGlyYWNhb190b2tlbiI6IjIwMjItMDktMTUgMTc6MTM6MjgifQ.CmK7n6_EMud3GjtOrjHedkmzSyLFyJRvj4a0U8DPLJA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/sistema_inter/backend/api/representante/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"sistema_inter",
+								"backend",
+								"api",
+								"representante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
