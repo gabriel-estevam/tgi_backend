@@ -200,11 +200,14 @@ CHANGE COLUMN `unidade_medida` `unidade_medida` VARCHAR(100) NOT NULL ;
 ## Testando Conexão com API
 Para Testar a conexão da API recomendamos instalar o Postman, acesse o site oficial do Postman e realize a instalação: https://www.postman.com/
 
+<br>
 Após instalar a ferramenta, realize a importação do arquivo JSON de coleção das Api's. Esse arquivo encontra-se presente no caminho do projeto ```C:\xampp\htdocs\tgi_backend``` TGI - CEUNSP.postman_collection.
 - Coleção Importada: https://i.imgur.com/Qi6M046.png
 
+<br>
 Antes de testar a conexão, verifique se a o Apache e o banco de dados MYSQL estão ativos, se estiver usando o xampp verifique o painel do mesmo.
 
+<br>
 Com o Postman aberto, acesse o diretório "login" clique na rota "login" POST veifique se a URL contem \tgi_backend\NOME_API
 clique em send. 
 Com isso, será gerado um **Token JWT**. Esse token tem validade de 6 horas e **deve ser usados no cabeçalho (headers)** das demais rotas da API. https://i.imgur.com/qP9kjpj.png
